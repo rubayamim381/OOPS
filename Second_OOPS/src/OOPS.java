@@ -12,7 +12,7 @@ class Student {
 		this.age = s1.age;
 	}
 	
-	Student(String name, int age){
+	Student(String name, int age){ //parameterize constructor
 		this.name = name;
 		this.age = age;
 	}
