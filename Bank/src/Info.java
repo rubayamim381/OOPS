@@ -1,8 +1,8 @@
-import details.Account;
+import bank.Bank;
 
 public class Info{
 	public static void main(String[] args) {
-		Account acc=new Account();
+		Bank acc=new Bank();
 		acc.name = "Mim";
 		System.out.print(acc.name);	
 	}
