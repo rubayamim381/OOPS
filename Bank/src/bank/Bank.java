@@ -9,7 +9,9 @@ class Account {
 	protected String email;
 	private String password;
 	
-	public String generateRandomPassword() {
+	
+//	Set password using Encapsulation
+	private String generateRandomPassword() {
 		
 		Random random = new Random();  
 	    IntStream r=random.ints(9, 50, 90);
@@ -17,12 +19,6 @@ class Account {
 	    String randomPassword = stream.collect(Collectors.joining());
 	    
 	    return randomPassword;
-	}
-	
-	public String getPassword() {
-		password = generateRandomPassword();
-		setPassword(password);
-		return this.password;
 	}
 	
 	//if we want to give the user any random password, we need to use private class
@@ -34,6 +30,14 @@ class Account {
 		public void setPassword(String password) {
 		this.password = password;
 	}*/
+	
+	public String getPassword() {
+		password = generateRandomPassword();
+		setPassword(password);
+		return this.password;
+	}
+	
+
 }
 
 public class Bank {
@@ -41,7 +45,9 @@ public class Bank {
 		Account acc = new Account();
 		acc.name = "Mim";
 		acc.email = "mim@mail.com";
-		System.out.print("Name: "+acc.name+"\nEmail: "+acc.email+"\nPassword: "+acc.getPassword());
+		System.out.print("Name: "+acc.name
+				+"\nEmail: "+acc.email
+				+"\nPassword: "+acc.getPassword());
 		
 	}
 }
